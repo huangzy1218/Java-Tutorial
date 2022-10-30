@@ -10,11 +10,11 @@ MySQL数据库管理系统简称MySQL，它是世界上最流行的开源数据�
 
 ### 建立连接
 
-<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20221028205733629.png" alt="image-20221028205733629" style="zoom: 33%;" />
+<img src=".\typora-user-images\image-20221028205733629.png" alt="image-20221028205733629" style="zoom: 33%;" />
 
 ### 建立数据库
 
-<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20221028205953607.png" alt="image-20221028205953607" style="zoom: 50%;" />
+<img src=".\typora-user-images\image-20221028205953607.png" alt="image-20221028205953607" style="zoom: 50%;" />
 
 ## JDBC
 
@@ -216,3 +216,4 @@ https://dev.mysql.com/downloads/file/?id=514063 下载mysql-connector-java-8.0.2
 
    
 
+![image-20221030091344137](image/image-20221030091344137.png)
