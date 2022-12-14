@@ -876,3 +876,286 @@ python3 hello.py
 ```python
 Hello, Python!
 ```
+
+## Python3控制语句
+
+### 条件控制
+
+#### `if`语句
+
+```python
+if condition_1:
+    statement_block_1
+elif condition_2:
+    statement_block_2
+else:
+    statement_block_3
+```
+
+```python
+age = int(input("请输入狗的年龄: "))
+print("")
+if age <= 0:
+    print("输入错误!")
+elif age == 1:
+    print("相当于 14 岁的人。")
+elif age == 2:
+    print("相当于 22 岁的人。")
+elif age > 2:
+    human = 22 + (age -2)*5
+    print("对应人类年龄: ", human)
+ 
+### 退出提示
+input("点击 enter 键退出")
+```
+
+#### `if`嵌套
+
+```python
+if 表达式1:
+    语句
+    if 表达式2:
+        语句
+    elif 表达式3:
+        语句
+    else:
+        语句
+elif 表达式4:
+    语句
+else:
+    语句
+```
+
+#### `match-case`语句
+
+语法格式如下：
+
+```python
+match subject:
+    case <pattern_1>:
+        <action_1>
+    case <pattern_2>:
+        <action_2>
+    case <pattern_3>:
+        <action_3>
+    case _:
+        <action_wildcard>
+```
+
+`case _:` 类似于 C 和 Java 中的 `default:`，当其他 case 都无法匹配时，匹配这条，保证永远会匹配成功。
+
+```python
+def http_error(status):
+    match status:
+        case 400:
+            return "Bad request"
+        case 404:
+            return "Not found"
+        case 418:
+            return "I'm a teapot"
+        case _:
+            return "Something's wrong with the internet"
+
+mystatus = 400
+print(http_error(400))
+```
+
+### 循环控制
+
+#### `while`循环
+
+```python
+while 判断条件(condition)：
+    执行语句(statements)……
+```
+
+以下实例使用了 `while` 来计算 1 到 100 的总和：
+
+```python
+n = 100
+sum = 0
+counter = 1
+while counter <= n:
+    sum = sum + counter
+    counter += 1
+
+print("1 到 %d 之和为 %d" % (n, sum))
+```
+
+#### `for`语句
+
+```python
+for <variable> in <sequence>:
+    <statements>
+else:
+    <statements>
+```
+
+```python
+sites = ["Baidu", "Google","Runoob","Taobao"]
+for site in sites:
+    if site == "Runoob":
+        print("Python教程")
+        break
+    print("循环数据 " + site)
+else:
+    print("没有循环数据")
+print("完成循环")
+```
+
+#### `range`函数
+
+使用内置`range()`函数生成数列。
+
+```python
+>>> for i in range(5):
+...     print(i)
+...
+0
+1
+2
+3
+4
+```
+
+```python
+>>> for i in range(5, 9):
+...     print(i)
+...
+5
+6
+7
+8
+```
+
+#### `pass`语句
+
+Python`pass`是空语句，是为了保持程序结构的完整性。
+
+`pass`不做任何事情，一般用做占位语句，如下实例：
+
+```python
+>>> while True:
+... 	pass
+```
+
+## Python3 迭代器与生成器
+
+### 迭代器
+
+#### 使用迭代器
+
+迭代是Python最强大的功能之一，是访问集合元素的一种方式。
+
+迭代器是一个可以记住遍历的位置的对象。
+
+迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结束。迭代器只能往前不会后退。
+
+迭代器有两个基本的方法：`iter()` 和 `next()`。
+
+字符串，列表或元组对象都可用于创建迭代器：
+
+```python
+>>> list = [i for i in range(10)]
+>>> it = iter(list)
+>>> print(next(it))
+0
+>>> print(next(it))
+1
+```
+
+```python
+list = [1, 2, 3, 4]
+it = iter(list)
+for x in it:
+    print(x, end = " ")
+```
+
+#### 创建迭代器
+
+把一个类作为一个迭代器使用需要在类中实现两个方法`iter()`与 `next()` 。
+
+- `__iter__()` 方法返回一个特殊的迭代器对象， 这个迭代器对象实现了 `__next()__` 方法并通过 StopIteration 异常标识迭代的完成。
+
+- `__next()__` 方法（Python 2 里是 next()）会返回下一个迭代器对象。
+
+```python
+class MyNumbers:
+    def __iter__(self):
+        self.a = 1
+        return self
+    
+    def __next__(self):
+        x = self.a
+        self.a += 1
+        return x
+
+myclass = MyNumbers()
+myiter = iter(myclass)
+
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+```
+
+#### StopIteration
+
+StopIteration 异常用于标识迭代的完成，防止出现无限循环的情况，在` __next__() `方法中我们可以设置在完成指定循环次数后触发 StopIteration 异常来结束迭代。
+
+```python
+class MyNumbers:
+    def __iter__(self):
+        self.a = 1
+        return self
+    
+    def __next__(self):
+        if self.a <= 20:
+            x = self.a
+            self.a += 1
+            return x
+        else:
+            raise StopIteration
+
+myclass = MyNumbers()
+myiter = iter(myclass)
+
+for x in myiter:
+    print(x)
+```
+
+### 生成器
+
+在 Python 中，使用了`yield` 的函数被称为生成器（generator）。
+
+跟普通函数不同的是，生成器是一个返回迭代器的函数，只能用于迭代操作，更简单点理解生成器就是一个迭代器。
+
+在调用生成器运行的过程中，每次遇到 yield 时函数会暂停并保存当前所有的运行信息，返回 `yield` 的值, 并在下一次执行 `next()` 方法时从当前位置继续运行。
+
+调用一个生成器函数，返回的是一个迭代器对象。
+
+```python
+import sys
+
+def fibonacci(n):
+    a, b, counter = 0, 1, 0
+    while True:
+        if counter > n:
+            return
+        yield a
+        a, b = b, a + b
+        counter += 1
+
+f = fibonacci(10)
+while True:
+    try:
+        print(next(f), end = " ")
+    except StopIteration:
+        sys.exit()
+```
+
+执行以上程序，输出结果如下：
+
+```
+0 1 1 2 3 5 8 13 21 34 55
+```
