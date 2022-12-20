@@ -1,0 +1,12 @@
+\contentsline {chapter}{目录}{i}{chapter*.1}%
+\contentsline {chapter}{绘图功能}{iii}{chapter*.2}%
+\contentsline {section}{\numberline {0.1}\LaTeX {}绘图简介}{iii}{section.0.1}%
+\contentsline {section}{\numberline {0.2}\hologoRobust {TikZ} 绘图语言}{iii}{section.0.2}%
+\contentsline {subsection}{\numberline {0.2.1}绘图方式}{iii}{subsection.0.2.1}%
+\contentsline {subsection}{\numberline {0.2.2}\hologoRobust {TikZ}坐标}{iv}{subsection.0.2.2}%
+\contentsline {subsection}{\numberline {0.2.3}\hologoRobust {TikZ}路径}{v}{subsection.0.2.3}%
+\contentsline {subsubsection}{线段和折线}{v}{subsubsection*.3}%
+\contentsline {subsubsection}{曲线}{vi}{subsubsection*.4}%
+\contentsline {subsection}{\numberline {0.2.4}\hologoRobust {TikZ}绘图绘图命令和参数}{vii}{subsection.0.2.4}%
+\contentsline {subsection}{\numberline {0.2.5}文字节点}{ix}{subsection.0.2.5}%
+\contentsline {subsection}{\numberline {0.2.6}绘制曲线}{xi}{subsection.0.2.6}%

@@ -1,0 +1,29 @@
+\documentclass[a4paper]{book}
+\usepackage{lshort-zh-cn-style}
+\newcommand{\code}{\ttfamily}
+\usepackage{tikz}
+\usetikzlibrary{chains,scopes,positioning,backgrounds,shapes,fit,shadows,calc,arrows.meta}
+\usepackage{graphicx}
+\usepackage{highlightlatex}
+\usepackage{efbox}
+\usepackage{verbatim}
+\usepackage[skins]{tcolorbox} %必须标注skin，才能使用shadow命令显示阴影。
+\tcbuselibrary{breakable} %breakable：支持跨页
+\usepackage{xcolor}
+\usepackage{amsmath}
+\numberwithin{figure}{section}
+\hypersetup{
+	pdftitle={The Short Introduction to LaTeX2e (Chinese Simplified)},
+	pdfkeywords={LaTeX, LaTeX2e},
+	pdfcreator={XeLaTeX with `ctex' package},
+}
+%\title{\LaTeX 学习}
+\author{huangzy1218}
+\begin{document}
+	\input{chap/titlepage}
+	
+	\frontmatter
+	\tableofcontents
+
+	\input{chap/graphic}
+\end{document}

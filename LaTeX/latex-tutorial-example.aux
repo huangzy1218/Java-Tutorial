@@ -1,0 +1,12 @@
+ \begin{tikzpicture}[domain=-3:3]
+  \draw[->] (-3.2,0) -- (3.2,0)
+   node[below] {$x$};
+  \draw[->] (0,-3.2) -- (0,3.2)
+   node[above] {$f(x)$};
+  \draw[very thin,color=gray]
+   (-3,-3) grid (3,3);
+  \draw[color=orange]plot(\x,\x);
+  \draw[color=blue]plot(\x,{sin(\x r)});
+  \draw[color=red]plot(\x,
+   {\x-(1/6)*(\x)^3});
+ \end{tikzpicture}
