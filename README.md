@@ -1,2 +1,2 @@
 # Novice-Tutorial
-Document my learning process
+document my learning process
