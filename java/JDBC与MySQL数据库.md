@@ -54,15 +54,15 @@ A--->C[JDBC-SQL Server连接器]
 A--->D[JDBC-MySQL连接器]
 ```
 
-1. 下载JDBC-MySQL数据库连接器
+1. **下载JDBC-MySQL数据库连接器**
 
-应用程序为访问MySQL，必须保证应用程序所驻留的计算机安装相应的JDBC-MySQL数据库连接器。
+	应用程序为访问MySQL，必须保证应用程序所驻留的计算机安装相应的JDBC-MySQL数据库连接器。
 
-https://dev.mysql.com/downloads/file/?id=514063 下载mysql-connector-java-8.0.21zip，解压至硬盘，解压到目录的jar文件即是连接JDBC数据库的JDBC-MySQL。
+	https://dev.mysql.com/downloads/file/?id=514063 下载mysql-connector-java-8.0.21zip，解压至硬盘，解压到目录的jar文件即是连接JDBC数据库的JDBC-MySQL。
 
-可将`mysql-connector-java-8.0.21.jar`保存（导入）到应用程序的当前目录中。
+	可将`mysql-connector-java-8.0.21.jar`保存（导入）到应用程序的当前目录中。
 
-2. 加载JDBC-MySQL数据库驱动程序
+2. **加载JDBC-MySQL数据库驱动程序**
 
    ```java
    try {
@@ -74,7 +74,7 @@ https://dev.mysql.com/downloads/file/?id=514063 下载mysql-connector-java-8.0.2
 
    MySQL数据库驱动程序被封装在Driver类中，该类的包名为`com.mysql.cj.jdbc`，该类不是运行Java运行环境类库中的类，而存在于数据库连接器中。
 
-3. 连接数据库
+3. **连接数据库**
 
    ```java
    static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
@@ -102,7 +102,7 @@ https://dev.mysql.com/downloads/file/?id=514063 下载mysql-connector-java-8.0.2
 
    应用程序一旦和某个数据库建立连接，就可通过SQL语句和该数据库的表交互信息，例如查询、修改、更改表中的记录。
 
-   4. 注意汉字问题
+4. **注意汉字问题**
 
       特别注意，若数据表中的记录含有汉字，则在建立连接时需要传递参数`characterEncoding=utf-8`。
 
@@ -368,7 +368,7 @@ ResultSetMetaData metaData = rs.getMetaData();
 
 ```java
 int columnCount = metaData.getColumnCount(); // 返回列数
-String columnName = metaData.getColumnName(); // 返回列名（字段数目）
+String columnName = metaData.getColumnName(i); // 返回列名（字段数目）
 ```
 
 
