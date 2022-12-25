@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.3.19)  21 DEC 2022 04:29
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.3.19)  25 DEC 2022 16:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1193,6 +1193,113 @@ Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 74.
 \@float@every@sourcecode=\toks49
 \c@sourcecode=\count390
 )
+(c:/texlive/2021/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2020/02/29 v1.17 Data Visualization (1.17)
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks50
+\t@pgfplots@tokb=\toks51
+\t@pgfplots@tokc=\toks52
+\pgfplots@tmpa=\dimen346
+\c@pgfplots@coordindex=\count391
+\c@pgfplots@scanlineindex=\count392
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.te
+x))
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex)
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfs
+upp_loader.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex))
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststru
+cture.code.tex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststru
+ctureext.code.tex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.co
+de.tex
+\c@pgfplotsarray@tmp=\count393
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.c
+ode.tex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.c
+ode.tex
+\c@pgfplotstable@counta=\count394
+\t@pgfplotstable@a=\toks53
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.co
+de.tex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.
+tex))
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.te
+x)
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfsh
+ading.code.tex
+\c@pgfplotslibrarysurf@no=\count395
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfsha
+ding.pgfsys-xetex.def
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfsha
+ding.pgfsys-dvipdfmx.def
+\c@pgfplotslibrarysurf@streamlen=\count396
+))))
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex))
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.t
+ex
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex
+))) (c:/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.t
+ex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.t
+ex
+\pgfdecoratedcompleteddistance=\dimen347
+\pgfdecoratedremainingdistance=\dimen348
+\pgfdecoratedinputsegmentcompleteddistance=\dimen349
+\pgfdecoratedinputsegmentremainingdistance=\dimen350
+\pgf@decorate@distancetomove=\dimen351
+\pgf@decorate@repeatstate=\count397
+\pgfdecorationsegmentamplitude=\dimen352
+\pgfdecorationsegmentlength=\dimen353
+)
+\tikz@lib@dec@box=\box118
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.pathmorphing.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
+orations.pathmorphing.code.tex))
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.pathreplacing.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
+orations.pathreplacing.code.tex))
+\pgfplots@numplots=\count398
+\pgfplots@xmin@reg=\dimen354
+\pgfplots@xmax@reg=\dimen355
+\pgfplots@ymin@reg=\dimen356
+\pgfplots@ymax@reg=\dimen357
+\pgfplots@zmin@reg=\dimen358
+\pgfplots@zmax@reg=\dimen359
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.
+tex
+File: pgflibraryplotmarks.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)))
 (c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 brarychains.code.tex
 File: tikzlibrarychains.code.tex 2020/12/27 v3.1.8b (3.1.8b)
@@ -1208,8 +1315,8 @@ File: tikzlibraryscopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 brarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@layerbox@background=\box118
-\pgf@layerboxsaved@background=\box119
+\pgf@layerbox@background=\box119
+\pgf@layerboxsaved@background=\box120
 )
 (c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 braryshapes.code.tex
@@ -1258,26 +1365,26 @@ File: tikzlibraryshapes.multipart.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (c:/texlive/2021/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.m
 ultipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfnodepartlowerbox=\box120
-\pgfnodeparttwobox=\box121
-\pgfnodepartthreebox=\box122
-\pgfnodepartfourbox=\box123
-\pgfnodeparttwentybox=\box124
-\pgfnodepartnineteenbox=\box125
-\pgfnodeparteighteenbox=\box126
-\pgfnodepartseventeenbox=\box127
-\pgfnodepartsixteenbox=\box128
-\pgfnodepartfifteenbox=\box129
-\pgfnodepartfourteenbox=\box130
-\pgfnodepartthirteenbox=\box131
-\pgfnodeparttwelvebox=\box132
-\pgfnodepartelevenbox=\box133
-\pgfnodeparttenbox=\box134
-\pgfnodepartninebox=\box135
-\pgfnodeparteightbox=\box136
-\pgfnodepartsevenbox=\box137
-\pgfnodepartsixbox=\box138
-\pgfnodepartfivebox=\box139
+\pgfnodepartlowerbox=\box121
+\pgfnodeparttwobox=\box122
+\pgfnodepartthreebox=\box123
+\pgfnodepartfourbox=\box124
+\pgfnodeparttwentybox=\box125
+\pgfnodepartnineteenbox=\box126
+\pgfnodeparteighteenbox=\box127
+\pgfnodepartseventeenbox=\box128
+\pgfnodepartsixteenbox=\box129
+\pgfnodepartfifteenbox=\box130
+\pgfnodepartfourteenbox=\box131
+\pgfnodepartthirteenbox=\box132
+\pgfnodeparttwelvebox=\box133
+\pgfnodepartelevenbox=\box134
+\pgfnodeparttenbox=\box135
+\pgfnodepartninebox=\box136
+\pgfnodeparteightbox=\box137
+\pgfnodepartsevenbox=\box138
+\pgfnodepartsixbox=\box139
+\pgfnodepartfivebox=\box140
 )))
 (c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 braryfit.code.tex
@@ -1302,32 +1409,32 @@ File: tikzlibrarycalc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (c:/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.cod
 e.tex
 File: pgflibraryarrows.meta.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfarrowinset=\dimen346
-\pgfarrowlength=\dimen347
-\pgfarrowwidth=\dimen348
-\pgfarrowlinewidth=\dimen349
+\pgfarrowinset=\dimen360
+\pgfarrowlength=\dimen361
+\pgfarrowwidth=\dimen362
+\pgfarrowlinewidth=\dimen363
 ) (c:/texlive/2021/texmf-dist/tex/latex/highlightlatex/highlightlatex.sty
 Package: highlightlatex 2021/03/14
 
 (c:/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count391
-\lst@gtempboxa=\box140
-\lst@token=\toks50
-\lst@length=\count392
-\lst@currlwidth=\dimen350
-\lst@column=\count393
-\lst@pos=\count394
-\lst@lostspace=\dimen351
-\lst@width=\dimen352
-\lst@newlines=\count395
-\lst@lineno=\count396
-\lst@maxwidth=\dimen353
+\lst@mode=\count399
+\lst@gtempboxa=\box141
+\lst@token=\toks54
+\lst@length=\count400
+\lst@currlwidth=\dimen364
+\lst@column=\count401
+\lst@pos=\count402
+\lst@lostspace=\dimen365
+\lst@width=\dimen366
+\lst@newlines=\count403
+\lst@lineno=\count404
+\lst@maxwidth=\dimen367
 
 (c:/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count397
-\lst@skipnumbers=\count398
-\lst@framebox=\box141
+\c@lstnumber=\count405
+\lst@skipnumbers=\count406
+\lst@framebox=\box142
 )
 (c:/texlive/2021/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -1336,23 +1443,23 @@ Package: listings 2020/03/24 1.8d (Carsten Heinz)
 
 (c:/texlive/2021/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
 Package: xeCJK-listings 2020/10/19 v3.8.6 xeCJK patch file for listings
-\l__xeCJK_listings_max_char_int=\count399
-\l__xeCJK_listings_flag_int=\count400
+\l__xeCJK_listings_max_char_int=\count407
+\l__xeCJK_listings_flag_int=\count408
 )
 (c:/texlive/2021/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 
 (c:/texlive/2021/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (c:/texlive/2021/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks51
-\XKV@tempa@toks=\toks52
+\XKV@toks=\toks55
+\XKV@tempa@toks=\toks56
 )
-\XKV@depth=\count401
+\XKV@depth=\count409
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (c:/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count402
+\etb@tempcnta=\count410
 )
 \hll@offset@fixskip=\skip75
 \hllBeforeSkip=\skip76
@@ -1388,9 +1495,9 @@ File: lstlang3.sty 2020/03/24 1.8d listings language file
 (c:/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
-\c@hll@update@state=\count403
-\c@hll@update@nextclassoffset=\count404
-\c@hll@update@classoffset=\count405
+\c@hll@update@state=\count411
+\c@hll@update@nextclassoffset=\count412
+\c@hll@update@classoffset=\count413
 )
 (c:/texlive/2021/texmf-dist/tex/latex/efbox/efbox.sty
 Package: efbox 2014/03/19 1.0 An enhanced fbox command.
@@ -1405,23 +1512,23 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 (c:/texlive/2021/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box142
-\tcb@upperbox=\box143
-\tcb@lowerbox=\box144
-\tcb@phantombox=\box145
-\c@tcbbreakpart=\count406
-\c@tcblayer=\count407
-\c@tcolorbox@number=\count408
-\tcb@temp=\box146
+\tcb@titlebox=\box143
+\tcb@upperbox=\box144
+\tcb@lowerbox=\box145
+\tcb@phantombox=\box146
+\c@tcbbreakpart=\count414
+\c@tcblayer=\count415
+\c@tcolorbox@number=\count416
 \tcb@temp=\box147
 \tcb@temp=\box148
 \tcb@temp=\box149
+\tcb@temp=\box150
 \tcb@out=\write6
 \tcb@record@out=\write7
 
 (c:/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '4.42'
-\tcb@waterbox=\box150
+\tcb@waterbox=\box151
 (c:/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.42'
 ))) (c:/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
@@ -1431,33 +1538,33 @@ Package: pdfcol 2019/12/29 v1.6 Handle new color stacks for pdfTeX (HO)
 Package pdfcol Info: Interface disabled because of missing PDF mode of pdfTeX.
 )
 Package pdfcol Info: pdfTeX's color stacks are not available.
-\tcb@testbox=\box151
-\tcb@totalupperbox=\box152
-\tcb@totallowerbox=\box153
+\tcb@testbox=\box152
+\tcb@totalupperbox=\box153
+\tcb@totallowerbox=\box154
 )
 (./latex-tutorial.aux)
 \openout1 = `latex-tutorial.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
@@ -1498,8 +1605,8 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 22.
-Package hyperref Info: Link coloring ON on input line 22.
+LaTeX Info: Redefining \selectfont on input line 23.
+Package hyperref Info: Link coloring ON on input line 23.
 
 (c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1510,21 +1617,27 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (c:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count409
+\c@section@level=\count417
 )
-LaTeX Info: Redefining \ref on input line 22.
-LaTeX Info: Redefining \pageref on input line 22.
-LaTeX Info: Redefining \nameref on input line 22.
+LaTeX Info: Redefining \ref on input line 23.
+LaTeX Info: Redefining \pageref on input line 23.
+LaTeX Info: Redefining \nameref on input line 23.
 
 (./latex-tutorial.out) (./latex-tutorial.out)
 \@outlinefile=\write8
 \openout8 = `latex-tutorial.out'.
 
-\c@lstlisting=\count410
- (./chap/titlepage.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 7.
 
-(c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
+your preamble.
+ on input line 23.
+
+\c@lstlisting=\count418
+(./chap/titlepage.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 7.
+ (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 7.
@@ -1776,34 +1889,80 @@ File: "latex-tutorial-example.aux"  (verbatim)
 File: "latex-tutorial-example.aux"  (verbatim)
 
 (./latex-tutorial-example.aux)
+Package hyperref Info: bookmark level for unknown sourcecode defaults to 0 on i
+nput line 516.
+
+
+LaTeX Warning: Float too large for page by 15.64894pt on input line 518.
+
 \openout5 = `latex-tutorial-example.aux'.
 
 File: "latex-tutorial-example.aux"  (verbatim)
- (./latex-tutorial-example.aux) [11] [12]
+(./latex-tutorial-example.aux) [11] [12]
 \openout5 = `latex-tutorial-example.aux'.
 
 File: "latex-tutorial-example.aux"  (verbatim)
 
-Overfull \hbox (1.42651pt too wide) in paragraph at lines 575--575
+Overfull \hbox (1.42651pt too wide) in paragraph at lines 620--620
 []  \TU/cmun(2)/m/n/9 \draw[->](0,0)--(4,0)node[right]{$x$};[] 
  []
 
 
-Overfull \hbox (1.42651pt too wide) in paragraph at lines 575--575
+Overfull \hbox (1.42651pt too wide) in paragraph at lines 620--620
 []  \TU/cmun(2)/m/n/9 \draw[->](0,0)--(0,3)node[above]{$y$};[] 
  []
 
 
-Overfull \hbox (1.42653pt too wide) in paragraph at lines 575--575
+Overfull \hbox (1.42653pt too wide) in paragraph at lines 620--620
 []  \TU/cmun(2)/m/n/9 coordinates {(0,0) (1,2) (2,1) (4,3)};[] 
  []
 
 
-Overfull \hbox (1.42653pt too wide) in paragraph at lines 575--575
+Overfull \hbox (1.42653pt too wide) in paragraph at lines 620--620
 []  \TU/cmun(2)/m/n/9 coordinates {(0,0) (1,2) (2,1) (4,3)};[] 
  []
 
 (./latex-tutorial-example.aux)
+\openout5 = `latex-tutorial-example.aux'.
+
+File: "latex-tutorial-example.aux"  (verbatim)
+ (./latex-tutorial-example.aux) [13]
+\openout5 = `latex-tutorial-example.aux'.
+
+File: "latex-tutorial-example.aux"  (verbatim)
+
+Overfull \hbox (1.42651pt too wide) in paragraph at lines 652--652
+[]  \TU/cmun(2)/m/n/9 \draw[color=blue]plot(\x,{sin(\x r)});[] 
+ []
+
+(./latex-tutorial-example.aux)
+Overfull \hbox (0.91447pt too wide) in paragraph at lines 12--652
+[][] 
+ []
+
+\openout5 = `latex-tutorial-example.aux'.
+
+File: "latex-tutorial-example.aux"  (verbatim)
+
+Overfull \hbox (1.4265pt too wide) in paragraph at lines 663--663
+[]  \TU/cmun(2)/m/n/9 \draw[color=red,xshift=2cm,samples=40][] 
+ []
+
+
+Overfull \hbox (6.15154pt too wide) in paragraph at lines 663--663
+[]       \TU/cmun(2)/m/n/9 plot({sin(\x r)},{0.5*cos(\x r)});[] 
+ []
+
+(./latex-tutorial-example.aux)
+\openout5 = `latex-tutorial-example.aux'.
+
+File: "latex-tutorial-example.aux"  (verbatim)
+
+Overfull \hbox (1.42651pt too wide) in paragraph at lines 679--679
+[] \TU/cmun(2)/m/n/9 \begin{tikzpicture}[x={(-.1cm,-.15cm)}, 
+ []
+
+(./latex-tutorial-example.aux) [14]
 \openout5 = `latex-tutorial-example.aux'.
 
 File: "latex-tutorial-example.aux"  (verbatim)
@@ -1812,26 +1971,22 @@ File: "latex-tutorial-example.aux"  (verbatim)
 
 File: "latex-tutorial-example.aux"  (verbatim)
 
-Overfull \hbox (1.42651pt too wide) in paragraph at lines 607--607
-[]  \TU/cmun(2)/m/n/9 \draw[color=blue]plot(\x,{sin(\x r)});[] 
- []
+(./latex-tutorial-example.aux) [15]
+\openout5 = `latex-tutorial-example.aux'.
 
-(./latex-tutorial-example.aux)
-Overfull \hbox (0.91447pt too wide) in paragraph at lines 12--607
-[][] 
- []
-
-[13]) [14] (./latex-tutorial.aux)
+File: "latex-tutorial-example.aux"  (verbatim)
+ (./latex-tutorial-example.aux)) [16]
+(./latex-tutorial.aux)
 Package rerunfilecheck Info: File `latex-tutorial.out' has not changed.
 (rerunfilecheck)             Checksum: 3F9056A12666378D9FD752F55C0782FA;1300.
  ) 
 Here is how much of TeX's memory you used:
- 36936 strings out of 476919
- 803302 string characters out of 5825424
- 1312903 words of memory out of 5000000
- 56075 multiletter control sequences out of 15000+600000
+ 47404 strings out of 476919
+ 1153370 string characters out of 5825424
+ 2188330 words of memory out of 5000000
+ 66399 multiletter control sequences out of 15000+600000
  420605 words of font info for 156 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 115i,9n,161p,660b,925s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,12n,161p,739b,2239s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex-tutorial.pdf (16 pages).
+Output written on latex-tutorial.pdf (18 pages).

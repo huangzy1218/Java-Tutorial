@@ -513,6 +513,51 @@ at (3,0) {a new node};
 		\draw [arrow](dec1) -| (pro6);
 		\draw [arrow](pro6) -- (stop);
 	\end{tikzpicture}
+\caption{遗传算法}
+	\end{center}
+\end{sourcecode}
+\begin{sourcecode}[htp]
+ \begin{Verbatim}
+  \begin{tikzpicture}
+			
+  \end{tikzpicture}
+	\end{Verbatim}
+	\begin{center}
+	 \begin{tikzpicture}
+	  \tikzstyle{treenode} = [circle,thick,minimum width=0.4cm,minimum height=0.4cm,
+	  text centered,draw=black,fill=blue!30]
+	  \tikzstyle{arrow} = [thick,->,>=stealth]
+%	  \tikzstyle{mark} = [red,yshift=0.3cm]
+	  % 绘制节点
+	  \node(F) [treenode,fill=red!30] {F};
+	  \node(B) [treenode,below of=F,xshift=-1.6cm] {B};
+	  \node(G) [treenode,below of=F,xshift=1.6cm] {G};
+	  \node(A) [treenode,below of=B,xshift=-1.2cm] {A};
+	  \node(D) [treenode,below of=B,xshift=1.2cm] {D};
+	  \node(I) [treenode,below of=G,xshift=1.2cm] {I};
+	  \node(C) [treenode,below of=D,xshift=-0.8cm] {C};
+	  \node(E) [treenode,below of=D,xshift=0.8cm] {E};
+	  \node(H) [treenode,below of=I,,xshift=-0.8cm] {H};
+	  % 绘制连线
+	  \draw [arrow] (F)--(B);
+	  \draw [arrow] (F)--(G);
+	  \draw [arrow] (B)--(A);
+	  \draw [arrow] (B)--(D);
+	  \draw [arrow] (G)--(I);
+	  \draw [arrow] (D)--(C);
+	  \draw [arrow] (D)--(E);
+	  \draw [arrow] (I)--(H);
+	  \node[below of=F,red,yshift=0.3cm]{1};
+	  \node[below of=B,red,yshift=0.3cm]{2};
+	  \node[below of=A,red,yshift=0.3cm]{3};
+	  \node[below of=D,red,yshift=0.3cm]{4};
+	  \node[below of=C,red,yshift=0.3cm]{5};
+	  \node[below of=E,red,yshift=0.3cm]{6};
+	  \node[below of=G,red,yshift=0.3cm]{7};
+	  \node[below of=I,red,yshift=0.3cm]{8};
+	  \node[below of=H,red,yshift=0.3cm]{9};
+	 \end{tikzpicture}
+ \caption{二叉树前序遍历}
 	\end{center}
 \end{sourcecode}
 \begin{figure}[h]
@@ -605,4 +650,88 @@ at (3,0) {a new node};
    {\x-(1/6)*(\x)^3});
  \end{tikzpicture}
 \end{example}
-Pgfplots是一个可视化工具，可以简化文档中的绘图。基本思想是提供输入数据/公式，而pgfplots完成其余工作。
+参数曲线在参数后添加\cmd{r}，样点数\texttt{samples}决定了曲线的光滑程度。
+\begin{example}
+ \begin{tikzpicture}[domain=0:2*pi]
+  \draw[very thin,color=gray](-2,-1) 
+       grid (4,1);
+  \draw[color=blue,xshift=-1cm]plot
+       ({sin(\x r)},{0.5*cos(\x r)});
+  \draw[color=red,xshift=2cm,samples=40]
+       plot({sin(\x r)},{0.5*cos(\x r)});
+ \end{tikzpicture}
+\end{example}
+绘制简单圆锥面，需要指明三个坐标各自的单位向量的位置。
+\begin{example}
+ \begin{tikzpicture}[x={(-.1cm,-.15cm)},
+ 	y={(1cm,0cm)},z={(0cm,1cm)}]
+  \draw[->](-5,0,0)--(5,0,0) 
+   node[below]{$x$};
+  \draw[->](0,-2,0)--(0,2,0) 
+   node[right]{$y$};
+  \draw[->](0,0,-1)--(0,0,3) 
+   node[above]{$z$};
+  \draw[color=red] plot[domain=0:2*pi] 
+   ({sin(\x r)},{cos(\x r)},2);
+   \draw[color=red] (0,0,0)--(0,1,2)
+    (0,0,0)--(0,-1,2);
+ \end{tikzpicture}
+\end{example}
+绘制网格坐标：
+\begin{example}
+ \scalebox{0.2}{
+ \begin{tikzpicture}
+  \draw[help lines] (0,0) grid (20,20);
+  \draw [->] (0,0)--(20.5,0) 
+   node[below right] {$x$};
+  \draw [->] (0,0)--(0,20.5) 
+   node[above left] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \foreach \i in {1,...,20}
+  \draw (\i,-0.05)--++(90:0.1) 
+   node[below=1mm]{\i};
+  \foreach \i in {1,...,20}
+  \draw (0.05,\i)--++(180:0.1) 
+   node[left=-0.5mm]{\i};
+   \draw[red,very thick] 
+    plot[domain=0:4](\x,{(\x)^2});
+   \draw[red,very thick] 
+    plot[domain=0:4]({(\x)^2},\x);
+   \draw[help lines,blue]
+    plot[domain=0:16](\x,\x);
+   \node[below of=2cm] at (10,0)
+   {$y=x^2$与$y=\log_{2}x$互为反函数};
+ \end{tikzpicture}} 
+\end{example}
+pgfplots是一个可视化工具，可以简化文档中的绘图。基本思想是提供输入数据公式，而pgfplots完成其余工作。其基本格式如下：
+\begin{command}
+	\cmd{addplot3}\oarg*{...}\texttt{coordiant}\marg*{\texttt{point1, point2, ...}}
+\end{command}
+\begin{itemize}
+	\item 用\texttt{mesh}选项绘制网格曲面
+\end{itemize}
+\begin{example}
+\scalebox{0.8}{
+ \begin{tikzpicture}
+  \begin{axis}[view={120}{30},
+  	xlabel=$x$,ylabel=$y$]
+   \addplot3
+    [domain=-2:2,y domain=-2:2,mesh]
+    {x^2-y^2};
+  \end{axis}
+ \end{tikzpicture}}
+\end{example}
+\begin{itemize}
+	\item 用\texttt{surf}选项绘制网格曲面
+\end{itemize}
+\begin{example}
+	\scalebox{0.8}{
+		\begin{tikzpicture}
+			\begin{axis}[view={120}{30},
+				xlabel=$x$,ylabel=$y$]
+				\addplot3
+				[domain=-2:2,y domain=-2:2,surf]
+				{x^2-y^2};
+			\end{axis}
+	\end{tikzpicture}}
+\end{example}
