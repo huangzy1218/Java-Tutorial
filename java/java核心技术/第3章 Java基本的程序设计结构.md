@@ -1,4 +1,4 @@
-# 第三章 Java基本的程序设计结构
+# 第3章 Java基本的程序设计结构
 
 ## 一个简单的Java程序
 
@@ -91,7 +91,7 @@ public static strictfp void main(String[] args)
 
 ### 关系运算符和`boolean`表达式
 
-`&&`和`II` ；是按照“短路”方式求值的。如果第一个操作数已经能够确
+`&&`和`||` ；是按照“短路”方式求值的。如果第一个操作数已经能够确
 定表达式的值，第二个操作数就不必计算。
 
 `&`和`|`运算符应用于布尔运算，得到的结果也是布尔值。只是不按“短路”方式计算。即在得到计算结果之前，一定要计算两个操作数的值。
@@ -171,7 +171,7 @@ public boolean equal(String)
 
 ```java
 String greeting = "Hello";
-int n "greeting.length(); // is 5.
+int n greeting.length(); // is 5.
 ```
 
 要想得到实际的长度，即代码点数量，可以调用：
@@ -183,3 +183,103 @@ int index= greeting.offsetByCodePoints(0, i);
 int cp = greeting.codePointAt(index);
 ```
 
+```java
+String greeting = "Hello";
+int n = greeting.length();
+int cpCount = greeting.codePointCount(0, n);
+System.out.println(cpCount);
+for (int i = 0; i < n; i++) {
+int index = greeting.offsetByCodePoints(0, i);
+int cp = greeting.codePointAt(index);
+System.out.print(cp);
+```
+
+```
+5
+72101108108111
+```
+
+使用UTF-16编码表示某些字符需要两个代码单元。调用
+`char ch= sentence.charAt(1);`，返回的不是空格（辅助字符），而是第二个代码单元的字符。`codePointAt`方法能够辨别一个代码单元是辅助字符的第一部分还是第二部分，并能够返回正确的结果。
+
+### 构建字符串
+
+使用`StringBuilder`类构建字符串，当每次需要添加一部分内容时，就调用`append(char/String)`方法。
+
+在JDK 5.0引入`StringBuilder`类． 这个类的前身是`StringBuffer` ，其效率略低，但允许采用**多线程**的方式执行添加或删除字符的操作。如果所有字符串在一个单线程中（通常都是这样）编辑，则应该用`StringBuilder`替代它。两者API相同。
+
+## 输入输出
+
+### 读取输入
+
+```java
+Scanner in = new Scanner(System.in);
+String name = in.nextLine(); // 在输入行中有可能包含空格
+```
+
+为输入是可见的，所以`Scanner`类不适用于从控制台读取密码，Java SE 6引入`Console`类实现这个目的。
+
+```java
+Console cons = System.console();
+String username = cons.readLine("Username: ");
+char[] password = cons.readPassword("Password: "); // 返回char[]
+System.out.println("Username: " + username);
+System.out.println("Password: " + Arrays.toString(password)); 
+```
+
+### 格式化输出
+
+可以使用静态的`String.format`方法创建一个格式化的字符串：
+
+```java
+String message = String.format("Hello, %s. You are %d years old", name, age);
+```
+
+### 文件输入输出
+
+要想对文件进行读取，就需要一个用`File`对象构造一个`Scanner`对象；要想写入文件，就需要构造一个`PrintWriter`对象。
+
+```java
+public static void main(String[] args) throws IOException {
+    File file = new File("myfile.txt");
+    Scanner in = new Scanner(new File("myfile.txt"));
+    String message = in.nextLine();
+    System.out.println(message);
+    PrintWriter out = new PrintWriter("myfile.txt");
+    out.println("Hello, World");
+}
+```
+
+## 控制流程
+
+### 块作用域
+
+在C++中，可以在嵌套的块中重定义一个变量。在内层定义的变量会覆盖外层定义的变量。这样，有可能会导筑程序设计错误，因此在Java 中不允许这样做。
+
+### 条件语句
+
+### 循环
+
+`for` 语句的3个部分应该对同一个计数器变量进行初始化、检测和更新。若不遵守这一规则，编写的循环常常晦涩难懂。
+
+## 大数值
+
+如果基本的整数和浮点数精度不能够满足需求，那么可以使用`java.math`包中的两个很有用的类： `BigInteger`和`BigDecimal` 。 这两个类可以处理包含任意长度数字序列的数值。`BigInteger`类实现了任意精度的整数运算，`BigDecimal`实现了任意精度的浮点数运算。
+
+使用静态的`valueOf`方法可以将普通的数值转换为大数值：
+
+```java
+BigInteger a = BitInteger.valueOf(100);
+BigInteger c = a.add(b); // c = a + b;
+BigInteger d = c.multiply(b.divide(c)); // d = c * (b / c);
+```
+
+`BigDecimal divide(BigDecilllal other, RoundingMode mode)`，要想计算商，必须给出舍入方式（rounding mode）。`RoundingMode.HALF_UP`为四舍五入，`.CEILING`、`.FLOOR`
+
+## 数组
+
+在Java 中，允许数组长度为0。在编写一个结果为数组的方法时，如果碰巧结果为空，则这种语法形式就显得非常有用。
+
+## 命令行参数
+
+在Java应用程序的`main`方法中，程序名并没有存储在`args`数组中。
