@@ -2245,3 +2245,125 @@ dialog.add(chooser);
 dialog.pack();
 ```
 
+```java
+package chap9;
+
+import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class ColorChooserTest {
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                ColorChooserFrame ColorChooserFrame = new ColorChooserFrame();
+                ColorChooserFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                ColorChooserFrame.setVisible(true);
+            }
+        });
+    }
+
+}
+
+class ColorChooserFrame extends JFrame {
+    public static final int WIDTH = 600;
+    public static final int HEIGHT = 400;
+
+    public ColorChooserFrame() {
+        setTitle("ColorChooserTest");
+        setSize(WIDTH, HEIGHT);
+        ColorChooserPanel panel = new ColorChooserPanel();
+        add(panel);
+    }
+
+    class ColorChooserPanel extends JPanel {
+
+        public ColorChooserPanel() {
+            // 有模式颜色选择器
+            JButton modalButton = new JButton("Modal");
+            modalButton.addActionListener(new ModalListener());
+            add(modalButton);
+            // 无模式颜色选择器
+            JButton modelessButton = new JButton("Modeless");
+            modelessButton.addActionListener(new ModelessListener());
+            add(modelessButton);
+            // 立即显示颜色（无需确认）
+            JButton immediateButton = new JButton("Immediate");
+            immediateButton.addActionListener(new ImmediateListener());
+            add(immediateButton);
+        }
+
+        private class ModalListener implements ActionListener {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Color defaultColor = getBackground(); // 获取窗体背景颜色
+                // 默认形式
+                Color selected = JColorChooser.showDialog(ColorChooserPanel.this, "Set background",
+                        defaultColor);
+                if (selected != null) // 选中的颜色
+                    setBackground(selected);
+            }
+        }
+
+        private class ModelessListener implements ActionListener {
+            private JDialog dialog;
+            private JColorChooser chooser;
+
+            public ModelessListener() {
+                chooser = new JColorChooser(); // 组件而非对话框
+                // 建立无模式对话框（直接添加）
+                dialog = JColorChooser.createDialog(ColorChooserPanel.this, "Background Color", false, /* 无模式 */
+                        chooser, new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                setBackground(chooser.getColor());
+                            }
+                        }, null);
+            }
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                chooser.setColor(getBackground());
+                dialog.setVisible(true);
+            }
+        }
+
+        private class ImmediateListener implements ActionListener {
+            private JDialog dialog;
+            private JColorChooser chooser;
+
+            public ImmediateListener() { // 立即响应
+                chooser = new JColorChooser();
+                chooser.getSelectionModel().addChangeListener(new ChangeListener() {
+                    @Override
+                    public void stateChanged(ChangeEvent e) {
+                        setBackground(chooser.getColor());
+                    }
+                });
+                // dialog = JColorChooser.createDialog(ColorChooserPanel.this, "Background Color", false, chooser, new  ChangeListener() {
+                //    @Override
+                //    public void stateChanged(ChangeEvent event) {
+                //       setBackground(chooser.getColor());
+                //    }
+                // }, null);
+                dialog = new JDialog((Frame) null, false);
+                dialog.add(chooser); // 给对话框添加组件
+                dialog.pack();
+            }
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                chooser.setColor(getBackground());
+                dialog.setVisible(true);
+            }
+        }
+    }
+
+}
+```
+
+![image-20230116012947958](typora-user-images/image-20230116012947958.png)
