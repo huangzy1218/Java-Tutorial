@@ -28,19 +28,19 @@ PC端五大浏览器： `IE`、`Chrome`、`Firefox`、`Safari`、`Opera`
 | 表现 | CSS        | 网页页面样式             |
 | 行为 | JavaScript | 页面模型的定义和界面交互 |
 
-## HTML标签
-
-### HTML语法规范
+## HTML语法规范
 
 **HTML：**超文本标记语言（Hyper Text Markup Language）是一种用于创建网页的标准标记语言。
 
-#### 基本语法概述
+### 基本语法概述
 
 HTML 标签是由**尖括号**包围的关键字词，例如：`<html>`。
 
-HTML 标签通常是成对出现的，例如：`<html>` 和 `</html>`，我们称为**双标签**。标签对中的第一个标签是**开始标签**，第二个标签是**结束标签**。
+HTML 标签通常是成对出现的，例如：`<html>` 和 `</html>`，我们称为**双标签**。标签对中的第一个标签是**开始标签**，第二个标签是**结束标签**。大多数 HTML 元素可拥有**属性**。
 
 有些特殊标签为单个标签，如`<br />`，称为**单标签**，注意其前有空格。`/`代表结束符。
+
+> 在 XHTML、XML 以及未来版本的 HTML 中，所有元素都必须被关闭，即使是空元素。
 
 #### 标签关系 
 
@@ -61,7 +61,7 @@ HTML 标签通常是成对出现的，例如：`<html>` 和 `</html>`，我们�
   </body>
   ```
 
-### HTML基本结构标签
+#### HTML基本结构标签
 
 每个网页均含有基本结构标签（骨架），其基本格如下：
 
@@ -75,12 +75,21 @@ HTML 标签通常是成对出现的，例如：`<html>` 和 `</html>`，我们�
 </html>
 ```
 
-| 标签名             | 定义     | 说明             |
-| ------------------ | -------- | ---------------- |
-| `<html> </html`    | 根标签   | 最基本的标签     |
-| `<head> </head>`   | 头部标签 | 设置标题等必需项 |
-| `<title> </title>` | 标题标签 | 网页标题         |
-| `<body> <body>`    | 主体标签 | 包含文档所有内容 |
+| 标签名             | 定义     | 说明                                               |
+| ------------------ | -------- | -------------------------------------------------- |
+| `<html> </html`    | 根标签   | 最基本的标签                                       |
+| `<head> </head>`   | 头部标签 | 设置标题等必需项，标签包含了文档的元数据（`meta`） |
+| `<title> </title>` | 标题标签 | 网页标题                                           |
+| `<body> </body>`   | 主体标签 | 包含文档所有内容                                   |
+
+#### 常见属性
+
+|  属性   |                             描述                             |
+| :-----: | :----------------------------------------------------------: |
+| `class` | 为html元素定义一个或多个类名（classname）(类名从样式文件引入) |
+|  `id`   |                       定义元素的唯一id                       |
+| `style` |              规定元素的行内样式（inline style）              |
+| `title` |            描述了元素的额外信息 (作为工具条使用)             |
 
 ### 网页开发工具
 
@@ -168,9 +177,11 @@ HTML 标签通常是成对出现的，例如：`<html>` 和 `</html>`，我们�
 </html>
 ```
 
-### HTML常用标签
+HTML
 
-#### 标题标签
+## HTML常用标签
+
+### 标题标签
 
 为了使网页更具有语义化，我们经常会在页面中用到标题标签。
 
@@ -182,7 +193,9 @@ HTML 标题（Heading）是通过`<h1> - <h6>` 标签来定义。
 <h3>这是一个标题</h3>
 ```
 
-#### 段落和换行标签
+> 在可用的六个标题级别中，您应该保证每个页面中标题级别的使用不超过三个，除非您认为有必要使用更多。具有许多标题级别的文档会变得难以操作并且难以导航。
+
+### 段落和换行标签
 
 HTML 段落是通过标签 `<p>` 来定义。
 
@@ -194,9 +207,11 @@ HTML 段落是通过标签 `<p>` 来定义。
 如果希望某段文本强制换行显示，就需要使用换行标签 `<br>`。
 
 - `<br>` 是个单标签
-- `<br>` 标签只是简单地开始新的一行，跟段落不一样，所以不会产生段间距
+- `<br/>` 标签只是简单地开始新的一行，跟段落不一样，所以不会产生段间距
 
-##### 文本格式化标签
+`<hr/>` 元素可用于分隔内容，使用该元素产生的水平线可以在视觉上将文档分隔成各个部分。
+
+### 文本格式化标签
 
 | 标签       | 描述         |
 | :--------- | :----------- |
@@ -236,13 +251,13 @@ HTML 段落是通过标签 `<p>` 来定义。
 
 <img src="typora-user-images/image-20221212221318361.png" alt="image-20221212221318361" style="zoom:80%;" />
 
-##### 计算机输出标签
+#### 计算机输出标签
 
 | 标签     | 描述               |
 | :------- | :----------------- |
 | `<code>` | 定义计算机代码     |
 | `<kbd>`  | 定义键盘码         |
-| `<smap>` | 定义计算机代码样本 |
+| `<samp>` | 定义计算机代码样本 |
 | `<var>`  | 定义变量           |
 | `<pre>`  | 定义预格式文本     |
 
@@ -266,7 +281,67 @@ HTML 段落是通过标签 `<p>` 来定义。
 
 <img src="typora-user-images/image-20221212221553334.png" alt="image-20221212221553334" style="zoom:80%;" />
 
-##### 引文引用及标签定义
+> 这些标签常用于显示计算机/编程代码。
+
+#### 引文引用及标签定义
+
+`<q>`用于短的引用，`<blockquote>`用于长的引用。
+
+```html
+<p>WWF 的目标是：<q>构建人与自然和谐共存的世界。</q></p>
+<p>以下内容引用自 WWF 的网站：</p>
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+    五十年来，WWF 一直致力于保护自然界的未来。
+    世界领先的环保组织，WWF 工作于 100 个国家，
+    并得到美国一百二十万会员及全球近五百万会员的支持。
+</blockquote>
+```
+
+HTML `<abbr>` 元素定义缩写或首字母缩略语。
+
+```html
+<p><abbr title="World Health Organization">WHO</abbr> 成立于 1948 年。</p>
+```
+
+如果设置了 `<dfn>` 元素的 title 属性，则定义项目：
+
+```html
+<p><dfn title="World Health Organization">WHO</dfn> 成立于 1948 年。</p>
+```
+
+如果 `<dfn>` 元素包含具有标题的 `<abbr>` 元素，则 title 定义项目：
+
+```html
+<p><dfn><abbr title="World Health Organization">WHO</abbr></dfn> 成立于 1948 年。</p>
+```
+
+HTML `<address>` 元素定义文档或文章的联系信息（作者/拥有者）。
+
+此元素通常以斜体显示。大多数浏览器会在此元素前后添加折行。
+
+```html
+<address>
+    Written by Donald Duck.<br> 
+    Visit us at:<br>
+    Example.com<br>
+    Box 564, Disneyland<br>
+    USA
+</address>
+```
+
+HTML `<cite>` 元素定义著作的标题。
+
+浏览器通常会以斜体显示 `<cite>` 元素。
+
+```html
+<p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
+```
+
+HTML `<bdo>` 元素定义双流向覆盖（bi-directional override），用于覆盖当前文本方向。
+
+```html
+<bdo dir="rtl">This text will be written from right to left</bdo>
+```
 
 | 标签           | 描述             |
 | :------------- | :--------------- |
@@ -296,9 +371,16 @@ HTML 段落是通过标签 `<p>` 来定义。
 
 <img src="typora-user-images/image-20221212221724095.png" alt="image-20221212221724095" style="zoom:67%;" />
 
-####  图像标签
+```html
+<!-- 在新窗口打开 -->
+<a href="https://www.w3cschool.cn/" target="_blank\">访问W3Cschool教程!</a> 
+<!-- 跳出框架 -->
+<a href="https://www.w3cschool.cn/" target="_top\">访问W3Cschool教程!</a> 
+```
 
-##### 图像的语法格式
+###  图像标签
+
+#### 图像的语法格式
 
 HTML 图像是通过标签 `<img>` 来定义。
 
@@ -312,7 +394,9 @@ HTML 图像是通过标签 `<img>` 来定义。
 
 `URL`是统一资源定位符（网址）。
 
-##### 图像标签的属性
+`<img>`标签有两个必需的属性：`src`和`alt`。
+
+#### 图像标签的属性
 
 | 属性     | 属性值   | 说明                                                         |
 | -------- | -------- | ------------------------------------------------------------ |
@@ -321,9 +405,11 @@ HTML 图像是通过标签 `<img>` 来定义。
 | `title`  | 文本     | 提示文本，鼠标放到图片上，显示的提示文字                     |
 | `width`  | 像素     | 设置图像的宽度（一般通过 CSS 设置）                          |
 | `height` | 像素     | 设置图像的高度（一般通过 CSS 设置）                          |
-| `border` | 像素     | 设置图像的边框粗细（一般通过 CSS 设置）                      |
+| `border` | 像素     | 设置图像的边框粗细（一般通过 CSS 设置）`                     |
 
-#### `<div>`和`<span>`标签
+>  假如某个 HTML 文件包含十个图像，那么为了正确显示这个页面，需要加载 11 个文件。加载图片是需要时间的，所以我们的建议是：慎用图片。
+
+### `<div>`和`<span>`标签
 
 `div` 是 division 的缩写表示：分割、分区。
 
@@ -332,9 +418,25 @@ HTML 图像是通过标签 `<img>` 来定义。
 - `<div>` 标签用来布局，一行只能放一个 `<div>`，**大盒子**
 - `<span>` 标签用来布局，一行上可以放多个 `<span>`，**小盒子**
 
-#### 超链接标签
+```html
+<p>我有一双
+<span style="color:gold">金色</span> 的
+<span style="font-size:50px">大眼睛</span>和
+<span style="color:blue">蓝色的头发</span>。
+</p> 
+```
 
-##### 链接的语法格式
+```html
+<p>这是一些文本。</p>
+<div style="color:#00FFFF">
+<h3>这是一个在 div 元素中的标题。</h3>
+<p>这是一个在 div 元素中的文本。</p>
+</div>
+```
+
+### 超链接标签
+
+#### 链接的语法格式
 
 ```html
 <a href="跳转目标" target="目标窗口的弹出方式">文本、图像或其他内容</a>
@@ -344,6 +446,75 @@ HTML 图像是通过标签 `<img>` 来定义。
 | -------- | ------------------------------------------------------------ |
 | `href`   | 用于指定链接目标的 url 地址，（必须属性）当标签应用 href 属性时，它就具有了超链接的功能 |
 | `target` | 用于指定链接页面的打开方式，其中 `_self` 在当前页面打开的方式（为默认值），`_blank` 在新窗口中打开的方式 |
+
+### HTML id
+
+HTML `id` 属性用于 为HTML 元素指定唯一的 id。
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1 id="myHeader">My Header</h1>
+
+</body>
+</html>
+```
+
+> id 名称对大小写敏感。
+
+同一个类名可以由多个 HTML 元素使用，而一个 id 名称只能由页面中的一个 HTML 元素使用：
+
+```html
+<style>
+/* 设置 id 为 "myHeader" 的元素的样式 */
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+
+/* 设置类名为 "city" 的所有元素的样式 */
+.city {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+}
+</style>
+
+<!-- 拥有唯一 id 的元素 -->
+<h1 id="myHeader">My Cities</h1>
+
+<!-- 拥有相同类名的多个元素 -->
+<h2 class="city">London</h2>
+<p>London is the capital of England.</p>
+
+<h2 class="city">Paris</h2>
+<p>Paris is the capital of France.</p>
+
+<h2 class="city">Tokyo</h2>
+<p>Tokyo is the capital of Japan.</p>
+```
+
+通过 ID 和链接实现 HTML 书签：
+
+```html
+<h2 id="C4">第四章</h2>
+<a href="#C4">跳转到第四章</a>
+<a href="html_demo.html#C4">Jump to Chapter 4</a>
+```
 
 ### HTML注释和特殊字符
 
@@ -372,6 +543,83 @@ HTML 图像是通过标签 `<img>` 来定义。
 
 注意：下标请使用：`<sub>2</sub>`，同时上标也建议使用：`<sup>2</sup>`。
 
+### HTML 头部
+
+HTML 头部元素包含关于文档的概要信息，也被称为元信息（meta-information）。
+
+####  `<head>` 元素
+
+`<head>`元素包含了所有的头部标签元素。在 `<head>`元素中你可以插入脚本（scripts）, 样式文件（CSS），及各种 meta 信息。
+
+#### `<title>` 元素
+
+title 在 HTML/XHTML 文档中是必须的。
+
+title 元素:
+
+- 定义了浏览器工具栏的标题
+- 当网页添加到收藏夹时，显示在收藏夹中的标题
+- 显示在搜索引擎结果页面的标题
+
+#### `<base>`元素
+
+`<base>`标签描述了基本的链接地址/链接目标，该标签作为 HTML 文档中所有的链接 规定默认地址或**默认目标**（target）:
+
+```html
+<head>       
+	<base href="//www.w3cschool.cn/images/" target="_blank">      
+</head>
+```
+
+#### `<link>`元素
+
+`<link>`标签定义了文档与外部资源之间的关系。
+
+`<link>` 标签通常用于链接到样式表：
+
+```html
+<head>       
+	<link rel="stylesheet" type="text/css" href="mystyle.css">   
+</head>
+```
+
+#### `<style>`元素
+
+`<style>`标签定义了HTML文档的样式文件引用地址。
+
+在`<style>` 元素中你需要指定样式文件来渲染HTML文档：
+
+```html
+<head>        
+<style type="text/css">        
+body {background-color:yellow}        
+p {color:blue}        
+</style>        
+</head>
+```
+
+#### `<meta>`元素
+
+`<meta>`标签提供关于 HTML 文档的元数据。元数据不会显示在页面上，但是对于机器是可读的。
+
+典型的情况是，meta元素被用于规定页面的描述、关键词、文档的作者、最后修改时间以及其他元数据。
+
+meta 元素定义页面的描述：
+
+```
+<meta name="description" content="Free Web tutorials on HTML, CSS, XML" />
+```
+
+meta 元素定义页面的关键词：
+
+```html
+<meta name="keywords" content="HTML, CSS, XML" />
+```
+
+#### `<script>`元素
+
+`<script>`标签用于加载脚本文件，如JavaScript。
+
 ### 表格标签
 
 #### 表格的作用
@@ -393,8 +641,14 @@ HTML 图像是通过标签 `<img>` 来定义。
 ```
 
 - `<table>` `</table>` 是用于定义表格的标签
+
 - `<tr>` `</tr>` 用于定义表格中的行，必须嵌套在 `<table>` `</table>` 标签中
+
 - `<td>` `</td>` 用于定义表格中的单元格，必须嵌套在 `<tr>` `</tr>` 标签中。
+
+- `<caption></ caption>`标签作为标题，并在表的顶部显示出来。
+
+  > 此标签在较新版本的HTML / XHTML中已弃用
 
 #### 表格单元格标签
 
@@ -423,6 +677,8 @@ HTML 图像是通过标签 `<img>` 来定义。
 | `cellspacing` | 像素值                    | 规定单元格之间的空白，默认 2 像素                            |
 | `width`       | 像素值 或 百分比          | 规定表格的宽度                                               |
 | `height`      | 像素值 或 百分比          | 规定表格的高度                                               |
+| `bgcolor`     | 颜色值                    | 设置背景颜色                                                 |
+| `background`  | 图片文件                  | 设置背景图像                                                 |
 
 #### 表格结构标签
 
@@ -601,14 +857,15 @@ HTML 图像是通过标签 `<img>` 来定义。
 | `method` | `get` / `post` | 用于设置表单数据的提交方式，其取值为 get 或 post   |
 | `name`   | 名称           | 用于指定表单的名称，以区分同一个页面中的多个表单域 |
 
-method 方法规定如何发送表单数据（form data）（表单数据会被发送到在 action 属性中规定的页面中）。
-
-表单数据可被作为 URL 变量的形式来发送（`method="get"`）或者作为 HTTP post 事务的形式来发送（`method="post"`）。
+> method 方法规定如何发送表单数据（form data）（表单数据会被发送到在 action 属性中规定的页面中）。
+>
+> 表单数据可被作为 URL 变量的形式来发送（`method="get"`）或者作为 HTTP post 事务的形式来发送（`method="post"`）。
+>
 
 **关于 GET 的注释：**
 
 - 将表单数据以名/值对的形式附加到 URL 中
-- URL 的长度是有限的（大约 3000 字符）
+- URL 的长度是**有限**的（大约 3000 字符）
 - 绝不要使用 `GET` 来发送敏感数据！（在 URL 中是可见的，且浏览器会缓存 URL）
 - 可加入浏览器书签的表单
 - `GET` 更适用于非安全数据，比如在 Google 中查询字符串
@@ -617,7 +874,7 @@ method 方法规定如何发送表单数据（form data）（表单数据会被�
 <form action="http://127.0.0.1:8080/" method="GET">
         姓名：<input type="text" name="name">
         <input type="submit">
-    </form>
+</form>
 ```
 
 **关于 POST 的注释：**
@@ -733,7 +990,7 @@ method 方法规定如何发送表单数据（form data）（表单数据会被�
    </label>
    ```
 
-   7. **按钮**
+7. **按钮**
 
       ```html
       <body>
@@ -978,6 +1235,10 @@ method 方法规定如何发送表单数据（form data）（表单数据会被�
 ```html
 <iframe height="500px" src="https://www.bilibili.com/" width="70%"></iframe>
 ```
+
+`<frameset>`标签在一个页面中设置一个或多个框架，用`<frameset></frameset>`代替了`<body>``</body>`，不能出现在`body`标签里。
+
+`<frame>`标签中我们使用`noresize`设置禁止用户拖拉框架大小；`scrolling`用于设置滚动条是否显示。
 
 ### SEO优化
 
