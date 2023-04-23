@@ -81,12 +81,9 @@ Javascript 脚本代码可被放置在 HTML 页面的 `<body>` 和 `<head>` 部�
 ### 外部的JavaScript
 
 ```html
-<!DOCTYPE html>
-<html>
-<body>
-	<script src="myScript.js"></script>
-</body>
-</html>
+<script type="text/javascript" src="demo.js">
+    document.write("这条语句没有执行");
+</script>
 ```
 
 ## Chrome 浏览器中执行 JavaScript
@@ -363,6 +360,37 @@ methodName : function() {
 
 函数是由事件驱动的或者当它被调用时执行的可重复使用的代码块。
 
+### 常用系统函数
+
+```java
+// eval(string): 计算表达式结果
+document.write("1+2=" + eval("1+2") + "<br/>");
+// escape(string): 编码字符串
+document.write(escape("?") + "</br>");
+// unescape(string): 解码字符串
+document.write(unescape("%3F") + "</br>");
+// parsexx(string): 解析字符串
+document.write(parseFloat("3.1321") + "<br/>");
+document.write(parseInt("332") + "<br/>");
+// isNaN(string): 判断是否为非数值型
+document.write(isNaN(12 * 3) + "</br>");
+// toString(radix): 将对象转化为radix(2-36)进制
+var a = 12;
+document.write(a.toString(2) + "</br>");
+// 将浮点数转为固定位
+var b = Math.PI;
+document.write(b.toFixed(3) + "</br>");
+var s = "12341234";
+// indexOf(val, fromIndex): 查找首次出现位置
+document.write(s.indexOf("12"));
+// lastIndexOf(val, fronIndex): 查找最后一次出现位置
+document.write(s.lastIndexOf("12") + "</br>");
+// charAt(index): 指定位置字符
+document.write(s.charAt(2) + "<br/>");
+// substring(start, stop): 截取字符串
+document.write(s.substring(1, 2) + "</br>");
+```
+
 ### 函数语法
 
 函数就是包裹在花括号中的代码块，前面使用了关键词 `function`：
@@ -536,6 +564,14 @@ var add = (function() {
 
 HTML 事件可以是浏览器行为，也可以是用户行为。
 
+```mermaid
+graph LR
+a[事件类型]-->鼠标事件
+a-->键盘事件
+a-->HTML事件
+a-->突变事件
+```
+
 ```html
 <button onclick="getElementById('demo').innerHTML=Date()">现在的时间是?</button>
 
@@ -551,7 +587,37 @@ HTML 事件可以是浏览器行为，也可以是用户行为。
 | `onmouseover` | 鼠标指针移动到指定的元素上时发生     |
 | `onmouseout`  | 用户从一个 HTML 元素上移开鼠标时发生 |
 | `onkeydown`   | 用户按下键盘按键                     |
-| `onload`      | 浏览器已完成页面的加载               |
+| `onload`      | shi浏览器已完成页面的加载            |
+
+### 事件句柄
+
+事件句柄又称事件处理函数，是指事件发生时要进行的操作。
+
+```html
+<mark handle="code"></mark>
+```
+
+### 事件处理
+
+#### 静态指定
+
+```html
+<form action="" method="post">
+    <input type="button" value="通过JS输出信息" onclick="window.alert('你好')">
+</form>
+```
+
+#### 动态指定
+
+基本语法：
+
+```javascript
+Object.onclick=function() {
+    // 事件处理函数
+}
+```
+
+
 
 ## 条件语句
 
