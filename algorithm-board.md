@@ -529,7 +529,7 @@ struct MST
     {
         if (x != parent[x])
             parent[x] = find(parent[x]);
-        return x;
+        return parent[x];
     }
     void add(int u, int v, int w)
     {
